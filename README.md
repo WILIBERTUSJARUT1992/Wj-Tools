@@ -1,37 +1,19 @@
-# WJ-Tools
+# WJ-WiFi
 
-Toolkit terminal sederhana untuk **Termux**. Berisi efek Matrix, banner, informasi sistem, dan generator kata sandi. Semua fitur bersifat lokal dan tidak melakukan akses tanpa izin ke perangkat atau jaringan lain.
+Tool edukasi untuk Termux Android.
 
 ## Fitur
-- `banner.py` — tampilan banner WJ-Tools
-- `matrix_effect.py` — animasi Matrix di terminal
-- `system_info.py` — informasi dasar perangkat/lingkungan
-- `password_generator.py` — membuat kata sandi acak
-- `hacker_toolkit.py` — menu utama untuk menjalankan fitur
-- `install.sh` — pemasangan dependensi dasar
+- Informasi dasar perangkat dan Python.
+- Informasi koneksi Wi-Fi jika Termux:API tersedia.
+- Checklist keamanan router milik sendiri.
 
-## Instalasi di Termux
-
+## Instalasi
 ```bash
 pkg update
-pkg install python git -y
-git clone https://github.com/WILIBERTUSJARUT1992/WJ-Tools.git
-cd WJ-Tools
-chmod +x install.sh
-./install.sh
-python hacker_toolkit.py
+pkg install python -y
+python WJ-WiFi.py
 ```
 
-Jika repositori belum diunggah ke GitHub, unduh ZIP proyek ini lalu ekstrak di Termux, kemudian masuk ke foldernya dan jalankan `python hacker_toolkit.py`.
+Opsional, untuk info koneksi Wi-Fi: instal aplikasi Termux:API dari sumber yang sama dengan Termux, lalu jalankan `pkg install termux-api`.
 
-## Menjalankan fitur langsung
-
-```bash
-python banner.py
-python matrix_effect.py
-python system_info.py
-python password_generator.py
-```
-
-## Catatan keamanan
-Gunakan toolkit ini hanya pada perangkat sendiri atau perangkat yang Anda punya izin untuk kelola. Proyek ini tidak berisi pencurian kredensial, eksploitasi, pemindaian target, atau akses jarak jauh.
+Tool ini tidak membobol kata sandi atau menyerang jaringan.
